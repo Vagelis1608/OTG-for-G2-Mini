@@ -1,0 +1,16 @@
+# OTG support
+# by Vagelis1608 @xda-developers
+
+on init
+    mkdir /mnt/media_rw/usbdisk0 0700 media_rw media_rw
+    mkdir /storage/usbdisk0 0700 root root
+
+    export SECONDARY_STORAGE /storage/usbdisk0
+
+    # Support for legacy paths
+    symlink /storage/usbdisk0 /usbdisk
+    symlink /storage/usbdisk0 /mnt/usbdisk
+
+service fuse_usbdisk0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk0 /storage/usbdisk0
+    class late_start
+    disabled
