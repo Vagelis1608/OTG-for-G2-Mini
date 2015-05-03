@@ -23,6 +23,7 @@
      devices.
 -->
 <permissions>
+    <feature name="android.hardware.usb.host" />
     <feature name="android.hardware.camera" />
     <feature name="android.hardware.location" />
     <feature name="android.hardware.location.network" />
