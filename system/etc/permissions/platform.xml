@@ -141,5 +141,5 @@
             file="/system/framework/android.test.runner.jar" />
     <library name="javax.obex"
             file="/system/framework/javax.obex.jar"/>
-
+ 
 </permissions>
